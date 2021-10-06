@@ -42,11 +42,11 @@ resource "aws_eks_node_group" "node" {
   ]
 
   instance_types = ["t2.large"]
-  disk_size      = 16
+  disk_size      = 12
 
   scaling_config {
     desired_size = 1
-    max_size     = 1
+    max_size     = 3
     min_size     = 1
   }
 
