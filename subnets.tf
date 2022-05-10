@@ -1,7 +1,7 @@
 resource "aws_subnet" "public1" {
   vpc_id                  = aws_vpc.eks.id
   cidr_block              = "172.17.0.0/24"
-  availability_zone       = "us-east-2b"
+  availability_zone       = "us-west-1a"
   map_public_ip_on_launch = true
 
   tags = {
@@ -15,7 +15,7 @@ resource "aws_subnet" "public1" {
 resource "aws_subnet" "public2" {
   vpc_id                  = aws_vpc.eks.id
   cidr_block              = "172.17.50.0/24"
-  availability_zone       = "us-east-2c"
+  availability_zone       = "us-west-1b"
   map_public_ip_on_launch = true
 
   tags = {
@@ -28,7 +28,7 @@ resource "aws_subnet" "public2" {
 resource "aws_subnet" "private1" {
   vpc_id            = aws_vpc.eks.id
   cidr_block        = "172.17.100.0/24"
-  availability_zone = "us-east-2b"
+  availability_zone = "us-west-1a"
 
   tags = {
     Name                              = "private1"
@@ -40,7 +40,7 @@ resource "aws_subnet" "private1" {
 resource "aws_subnet" "private2" {
   vpc_id            = aws_vpc.eks.id
   cidr_block        = "172.17.150.0/24"
-  availability_zone = "us-east-2c"
+  availability_zone = "us-west-1b"
 
   tags = {
     Name                              = "private2"
